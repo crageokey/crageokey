@@ -1,0 +1,135 @@
+1. Retrieving Policy Types from our Microservices Database Tables
+Endpoint: https://oldmutualnigeria.sharepoint.com/sites/projects/USSD/api/policy-types
+Method: GET
+
+Response:
+
+JSON
+
+{
+  "policyTypes": [
+    {
+      "press": 1,
+      "type": "3rd Party Motor"
+    },
+    {
+      "press": 2,
+      "type": "Family Risk Plan"
+    },
+    {
+      "press": 3,
+      "type": "Travelsure"
+    }
+  ]
+}
+
+2. API to Retrieve Premium Amounts
+Endpoint: https://oldmutualnigeria.sharepoint.com/sites/projects/USSD/api/premium-amounts
+Method: GET
+
+Response:
+
+JSON
+
+{
+  "premiumAmounts": [
+    {
+      "press": 1,
+      "amount": 5000
+    },
+    {
+      "press": 2,
+      "amount": 10000
+    },
+    {
+      "press": 3,
+      "amount": 20000
+    },
+    {
+      "press": 4,
+      "amount": 30000
+    },
+    {
+      "press": 5,
+      "amount": 50000
+    }
+  ]
+}
+
+3. API to Retrieve Policy Tenure
+Endpoint: https://oldmutualnigeria.sharepoint.com/sites/projects/USSD/api/policy-tenures
+Method: GET
+
+Response:
+
+JSON
+
+{
+  "policyTenures": [
+    {
+      "press": 1,
+      "tenure": "12 months"
+    },
+    {
+      "press": 2,
+      "tenure": "24 months"
+    },
+    {
+      "press": 3,
+      "tenure": "60 months"
+    }
+  ]
+}
+
+4. API to Purchase Policy
+Endpoint: https://oldmutualnigeria.sharepoint.com/sites/projects/USSD/api/purchase-policy
+Method: POST
+
+Request Body:
+
+JSON
+
+{
+  "policyTypePress": 1,
+  "premiumAmountPress": 2,
+  "policyTenurePress": 3
+}
+Response:
+
+JSON
+
+{
+  "status": "success",
+  "message": "Policy purchased successfully",
+  "policyDetails": {
+    "policyType": "3rd Party Motor",
+    "premiumAmount": 10000,
+    "policyTenure": "60 months"
+  }
+}
+Database Table Structures
+For completeness, here are the updated structured tables in the database based on the new information provided:
+Policy Types for USSD
+Press	Policy Type
+1	3rd Party Motor
+2	Family Risk Plan
+3	Travelsure
+
+Family Plan Premium Amount 
+Press	Premium Amount
+1	5000
+2	10000
+3	20000
+4	30000
+5	50000
+
+Policy Tenure
+Press	Policy Tenure
+1	12months
+2	24months
+3	60months
+
+
+
+Please contact 
+Courage Okey cokey@oldmutualnigeria.com; Funmi Oyeyipo foyeyipo@oldmutualnigeria.com
